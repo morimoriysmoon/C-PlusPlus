@@ -2,4 +2,4 @@
 Examples and In-Depth study
 
 ## IDE in use
-Code::Blocks 17.12 with MinGW GCC
+Code::Blocks 17.12 with GCC
