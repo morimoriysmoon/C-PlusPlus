@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1393707091 source:d:\stuff_idid\c_plusplus\effective_cpp\chapter46_nonmember_function_template\main.cpp
+	<iostream>
+
+1427634936 source:e:\github\private-programming\c_plusplus\effective_cpp\chapter46_nonmember_function_template\main.cpp
+	<iostream>
+	"rational.h"
+
+1427634936 e:\github\private-programming\c_plusplus\effective_cpp\chapter46_nonmember_function_template\rational.h
+

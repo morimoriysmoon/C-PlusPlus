@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1427615448 source:d:\stuff_idid\c_plusplus\effective_cpp\chapter13_best_way_to_manage_resource\main.cpp
+	<iostream>
+	<memory>
+
+1456462028 source:e:\github\private-programming\c_plusplus\effective_cpp\chapter13_best_way_to_manage_resource\main.cpp
+	<iostream>
+	<memory>
+	<utility>
+

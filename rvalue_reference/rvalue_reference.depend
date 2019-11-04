@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1410854451 source:d:\stuff_idid\c_plusplus\rvalue_reference\main.cpp
+	<iostream>
+	<vector>
+	"remote_integer.h"
+
+1410786874 d:\stuff_idid\c_plusplus\rvalue_reference\include\remote_integer.h
+	<iostream>
+	<utility>
+

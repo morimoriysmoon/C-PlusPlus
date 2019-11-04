@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1400369015 source:d:\stuff_idid\c_plusplus\effective_cpp\chapter33_inherited_name_hiding\main.cpp
+	<iostream>
+
+1456463350 source:e:\github\private-programming\c_plusplus\effective_cpp\chapter33_inherited_name_hiding\main.cpp
+	<iostream>
+	<string>
+

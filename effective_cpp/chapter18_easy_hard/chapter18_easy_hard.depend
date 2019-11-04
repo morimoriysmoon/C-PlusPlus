@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1392974592 source:d:\stuff_idid\c_plusplus\effective_cpp\chapter18_easy_hard\main.cpp
+	<iostream>
+	<memory>
+	<string>
+
+1436502343 source:e:\github\private-programming\c_plusplus\effective_cpp\chapter18_easy_hard\main.cpp
+	<iostream>
+	<memory>
+	<string>
+
