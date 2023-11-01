@@ -14,8 +14,8 @@ public:
     {
     }
 
-    // const / non-constµµ overloadingÀÌ °¡´ÉÇÏ¸ç ¼­·Î ´Ù¸¥ ÇÔ¼ö°¡ µÈ´Ù.
-    // ÁÖÀÇ : return value´Â ´ÙÇü¼ºÀÇ ¿ä¼Ò°¡ µÉ ¼ö ¾ø´Ù.
+    // const / non-constë„ overloadingì´ ê°€ëŠ¥í•˜ë©° ì„œë¡œ ë‹¤ë¥¸ í•¨ìˆ˜ê°€ ëœë‹¤.
+    // ì£¼ì˜ : return valueëŠ” ë‹¤í˜•ì„±ì˜ ìš”ì†Œê°€ ë  ìˆ˜ ì—†ë‹¤.
 
     const char& operator[](std::size_t position) const
     {
@@ -25,8 +25,8 @@ public:
     char& operator[](std::size_t position)
     {
         cout << "char& operator[]() called" << endl;
-        // constÇÔ¼ö¸¦ »ç¿ëÇÏ¿© non-constÇÔ¼ö¸¦ ±¸ÇöÇÏ¿´´Ù.ÄÚµå Áßº¹¸¦ ¸·±â À§ÇÏ¿©.
-        // static_cast<TextBook&>¸¦ »ç¿ëÇÏ¸é Àç±ÍÈ£ÃâÀÌ µÇ¾î ¹ö¸°´Ù. ¿µ¿øÈ÷ ³¡³ªÁö ¾Ê´Â.
+        // constí•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ non-constí•¨ìˆ˜ë¥¼ êµ¬í˜„í•˜ì˜€ë‹¤.ì½”ë“œ ì¤‘ë³µë¥¼ ë§‰ê¸° ìœ„í•˜ì—¬.
+        // static_cast<TextBook&>ë¥¼ ì‚¬ìš©í•˜ë©´ ì¬ê·€í˜¸ì¶œì´ ë˜ì–´ ë²„ë¦°ë‹¤. ì˜ì›íˆ ëë‚˜ì§€ ì•ŠëŠ”.
         return const_cast<char&>( static_cast<const TextBook&>(*this)[position] );
     }
 
@@ -43,7 +43,7 @@ int main()
     cout << "Hello world!" << endl;
 
     TextBook tb("non const class");
-    const TextBook ctb("const class"); // const class¸¦ Á¤ÀÇÇØ¾ßÁö¸¸ ¸öÃ¼°¡ constÀÎ ÇÔ¼ö¸¦ È£ÃâÇÒ ¼ö ÀÖ´Ù.
+    const TextBook ctb("const class"); // const classë¥¼ ì •ì˜í•´ì•¼ì§€ë§Œ ëª¸ì²´ê°€ constì¸ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•  ìˆ˜ ìˆë‹¤.
 
     tb[0] = 'N';
     //ctb[0] = 'C'; // error : assignment of read-only location
