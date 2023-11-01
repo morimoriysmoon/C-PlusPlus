@@ -22,22 +22,22 @@ class Derived : public Base
 public:
     Derived() : Base(0) {}
     Derived(int _id, int _idx)
-    : Base(_id), /// ±âº»Å¬·¡½ºÀÇ º¹»ç »ý¼ºÀÚ¸¦ È£ÃâÇÑ´Ù.
+    : Base(_id), /// ê¸°ë³¸í´ëž˜ìŠ¤ì˜ ë³µì‚¬ ìƒì„±ìžë¥¼ í˜¸ì¶œí•œë‹¤.
     index(_idx)
     {}
 
     Derived& operator=(const Derived& rhs)
     {
-        /// º¹»ç ´ëÀÔ ¿¬»êÀÚ¸¦ Á÷Á¢ ±¸ÇöÇÒ ¶§´Â ÁÖÀÇÇØ¾ß ÇÑ´Ù.
-        /// ±¸Çö ³»¿ëÀÌ È®½ÇÈ÷ Àß¸øµÇ¾ú´õ¶óµµ ÄÄÆÄÀÏ·¯´Â ÀÔÀ» ´Ù¹°°í ÀÖ´Ù.
+        /// ë³µì‚¬ ëŒ€ìž… ì—°ì‚°ìžë¥¼ ì§ì ‘ êµ¬í˜„í•  ë•ŒëŠ” ì£¼ì˜í•´ì•¼ í•œë‹¤.
+        /// êµ¬í˜„ ë‚´ìš©ì´ í™•ì‹¤ížˆ ìž˜ëª»ë˜ì—ˆë”ë¼ë„ ì»´íŒŒì¼ëŸ¬ëŠ” ìž…ì„ ë‹¤ë¬¼ê³  ìžˆë‹¤.
 
 
-        /// Å¬·¡½ºÀÇ º¹»ç ÇÔ¼ö 2°³¸¦ ±¸ÇöÇÒ ¶§, ÇÑÂÊÀ» ÀÌ¿ëÇØ¼­ ´Ù¸¥ ÂÊÀ» ±¸ÇöÇÏ·Á´Â ½Ãµµ´Â Àý´ë·Î ÇÏÁö ¸¶¼¼¿ä.
-        /// ±× ´ë½Å, °øÅëµÈ µ¿ÀÛÀ» Á¦3ÀÇ ÇÔ¼ö¿¡´Ù ºÐ¸®ÇØ ³õ°í ¾çÂÊ¿¡¼­ ÀÌ°ÍÀ» È£ÃâÇÏ°Ô ¸¸µé¾î¼­ ÇØ°áÇÕ½Ã´Ù.
+        /// í´ëž˜ìŠ¤ì˜ ë³µì‚¬ í•¨ìˆ˜ 2ê°œë¥¼ êµ¬í˜„í•  ë•Œ, í•œìª½ì„ ì´ìš©í•´ì„œ ë‹¤ë¥¸ ìª½ì„ êµ¬í˜„í•˜ë ¤ëŠ” ì‹œë„ëŠ” ì ˆëŒ€ë¡œ í•˜ì§€ ë§ˆì„¸ìš”.
+        /// ê·¸ ëŒ€ì‹ , ê³µí†µëœ ë™ìž‘ì„ ì œ3ì˜ í•¨ìˆ˜ì—ë‹¤ ë¶„ë¦¬í•´ ë†“ê³  ì–‘ìª½ì—ì„œ ì´ê²ƒì„ í˜¸ì¶œí•˜ê²Œ ë§Œë“¤ì–´ì„œ í•´ê²°í•©ì‹œë‹¤.
 
 
-        /// ±âº»Å¬·¡½ºµµ ¹Ýµå½Ã º¹»çÇØ¾ß ÇÑ´Ù.
-        /// const Derived& ==> const Base& : Æ÷ÀÎÅÍ/ÂüÁ¶ÀÚ´Â ºÎ¸ðÅ¸ÀÔÀÌ ÀÚ½ÄÅ¸ÀÔÀ» ´ãÀ» ¼ö ÀÖ´Ù.
+        /// ê¸°ë³¸í´ëž˜ìŠ¤ë„ ë°˜ë“œì‹œ ë³µì‚¬í•´ì•¼ í•œë‹¤.
+        /// const Derived& ==> const Base& : í¬ì¸í„°/ì°¸ì¡°ìžëŠ” ë¶€ëª¨íƒ€ìž…ì´ ìžì‹íƒ€ìž…ì„ ë‹´ì„ ìˆ˜ ìžˆë‹¤.
         Base::operator=(rhs);
         this->index = rhs.index;
         return *this;
@@ -62,11 +62,11 @@ int main()
 
     dB = dA;
 
-    /// Æ÷ÀÎÅÍ/ÂüÁ¶ÀÚ´Â ºÎ¸ðÅ¸ÀÔÀÌ ÀÚ½ÄÅ¸ÀÔÀ» ´ãÀ» ¼ö ÀÖ´Ù.
+    /// í¬ì¸í„°/ì°¸ì¡°ìžëŠ” ë¶€ëª¨íƒ€ìž…ì´ ìžì‹íƒ€ìž…ì„ ë‹´ì„ ìˆ˜ ìžˆë‹¤.
     Base * ptr0 = new Derived(2,3);
     delete ptr0;
 
-    /// Æ÷ÀÎÅÍ/ÂüÁ¶ÀÚ´Â ºÎ¸ðÅ¸ÀÔÀÌ ÀÚ½ÄÅ¸ÀÔÀ» ´ãÀ» ¼ö ÀÖ´Ù.
+    /// í¬ì¸í„°/ì°¸ì¡°ìžëŠ” ë¶€ëª¨íƒ€ìž…ì´ ìžì‹íƒ€ìž…ì„ ë‹´ì„ ìˆ˜ ìžˆë‹¤.
     Derived dC(2,3);
     Base& rC = dC;
 

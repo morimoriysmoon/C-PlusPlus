@@ -12,9 +12,9 @@ const size_t MinimunPasswordLength = 8;
 string encryptPassword_Bad(const string& password)
 {
     /**
-    º¯¼ö Á¤ÀÇ¸¦ ³Ê¹« ¾Õ¼­ ÇÒ ÇÊ¿ä°¡ ¾ø´Ù.
-    ¼º´ÉÀÌ ³ªºüÁú ¼ö ÀÖ´Ù.
-    if¹® ¾Æ·¡¿¡¼­ º¯¼ö¸¦ Á¤ÀÇÇÏ´Â °ÍÀÌ ³´´Ù.
+    ë³€ìˆ˜ ì •ì˜ë¥¼ ë„ˆë¬´ ì•ì„œ í•  í•„ìš”ê°€ ì—†ë‹¤.
+    ì„±ëŠ¥ì´ ë‚˜ë¹ ì§ˆ ìˆ˜ ìˆë‹¤.
+    ifë¬¸ ì•„ë˜ì—ì„œ ë³€ìˆ˜ë¥¼ ì •ì˜í•˜ëŠ” ê²ƒì´ ë‚«ë‹¤.
     */
     string encrypted;
 
@@ -34,12 +34,12 @@ string encryptPassword_Good(const string& password)
     }
 
     /**
-    Á¤ÀÇ¿Í µ¿½Ã¿¡ ÃÊ±âÈ­ÇÑ´Ù.
+    ì •ì˜ì™€ ë™ì‹œì— ì´ˆê¸°í™”í•œë‹¤.
     */
     string encrypted(password);
 
     /**
-    ¾ÏÈ£È­ ÀÛ¾÷À» ¼öÇàÇÑ´Ù.
+    ì•”í˜¸í™” ì‘ì—…ì„ ìˆ˜í–‰í•œë‹¤.
     */
 
     return encrypted;

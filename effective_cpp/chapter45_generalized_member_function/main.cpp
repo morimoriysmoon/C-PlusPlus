@@ -23,7 +23,7 @@ public:
 
     /**
         generalized copy constructor
-        template<class T>ÀÇ °æ¿ì, ¸â¹öÇÔ¼ö templateÀÌ¹Ç·Î ÀÚµ¿À¸·Î deductionµÇ¾î Ãß°¡ÇÒ ÇÊ¿ä°¡ ¾ø´Ù.
+        template<class T>ì˜ ê²½ìš°, ë©¤ë²„í•¨ìˆ˜ templateì´ë¯€ë¡œ ìë™ìœ¼ë¡œ deductionë˜ì–´ ì¶”ê°€í•  í•„ìš”ê°€ ì—†ë‹¤.
     */
     template<class T>
     Smart_Ptr(const Smart_Ptr<T>& rhs) : mPtr(rhs.get())
@@ -32,8 +32,8 @@ public:
     }
 
     /**
-        Smart_Ptr<Base> Æ÷ÀÎÅÍ¿¡ compatibleÇÑ Æ÷ÀÎÅÍ¸¦ ´ëÀÔÇÏ°í ½ÍÀ¸¸é ¾Æ·¡ÀÇ ´ëÀÔ(¶Ç´Â ÇÒ´ç)¿¬»êÀÚ¸¦ Á¤ÀÇÇØ¾ß ÇÑ´Ù.
-        template<class T>ÀÇ °æ¿ì, ¸â¹öÇÔ¼ö templateÀÌ¹Ç·Î ÀÚµ¿À¸·Î deductionµÇ¾î Ãß°¡ÇÒ ÇÊ¿ä°¡ ¾ø´Ù.
+        Smart_Ptr<Base> í¬ì¸í„°ì— compatibleí•œ í¬ì¸í„°ë¥¼ ëŒ€ì…í•˜ê³  ì‹¶ìœ¼ë©´ ì•„ë˜ì˜ ëŒ€ì…(ë˜ëŠ” í• ë‹¹)ì—°ì‚°ìë¥¼ ì •ì˜í•´ì•¼ í•œë‹¤.
+        template<class T>ì˜ ê²½ìš°, ë©¤ë²„í•¨ìˆ˜ templateì´ë¯€ë¡œ ìë™ìœ¼ë¡œ deductionë˜ì–´ ì¶”ê°€í•  í•„ìš”ê°€ ì—†ë‹¤.
     */
     template<class T>
     Smart_Ptr<U>& operator=(const Smart_Ptr<T>& rhs)
@@ -62,7 +62,7 @@ int main()
     Smart_Ptr<Base> ptrBase1(new Derived());
 
     Smart_Ptr<Derived> ptrDerived0(new Derived());
-    //Smart_Ptr<Derived> ptrDerived1(new Base()); /** Derived* = Base* ´Â ºÒ°¡ */
+    //Smart_Ptr<Derived> ptrDerived1(new Base()); /** Derived* = Base* ëŠ” ë¶ˆê°€ */
 
     ptrBase0 = ptrDerived0;
 

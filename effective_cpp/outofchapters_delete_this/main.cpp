@@ -54,7 +54,7 @@ public:
     {
         cout << "~DeleteThis() called" << endl;
 
-        /// infinite loop·Î ÀÎÇÏ¿© stack overflow°¡ ¹ß»ý
+        /// infinite loopë¡œ ì¸í•˜ì—¬ stack overflowê°€ ë°œìƒ
         //delete this;
     }
 
@@ -104,7 +104,7 @@ public:
     Or, what if he cuts and pastes certain portions of the class to a new class that he intends to use on the stack?
 
 
-    > ÀûÀýÇÑ ¿¹Á¦
+    > ì ì ˆí•œ ì˜ˆì œ
 
     Well, in Component Object Model (COM) delete this construction can be a part of Release method that is called whenever you want to release aquisited object:
 
@@ -116,7 +116,7 @@ public:
     }
 
 
-    - ¿ä¾àÇÏ¸é, delete this; È£Ãâ ÈÄ¿¡ ´Ù¸¥ µ¿ÀÛÀ» ÇÏÁö ¾Ê´Â´Ù¸é ¹®Á¦°¡ ¾øÁö¸¸, ÀÌ ¹æ¹ýÀ» »ç¿ëÇÏ±â ²¨¸®´Â »ç¶÷µµ ÀûÁö ¾Ê´Ù.
+    - ìš”ì•½í•˜ë©´, delete this; í˜¸ì¶œ í›„ì— ë‹¤ë¥¸ ë™ìž‘ì„ í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´ ë¬¸ì œê°€ ì—†ì§€ë§Œ, ì´ ë°©ë²•ì„ ì‚¬ìš©í•˜ê¸° êº¼ë¦¬ëŠ” ì‚¬ëžŒë„ ì ì§€ ì•Šë‹¤.
 
 
 
@@ -125,20 +125,20 @@ public:
     https://kldp.org/node/19565
 
 
-    new, delete ¿¡¼­´Â À§ÇèÇÏÁö¸¸, ±¸ÇöÀ» Àß »ý°¢ÇÏ¸é ±×·± Æ®¸¯À» ÀÌ¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
+    new, delete ì—ì„œëŠ” ìœ„í—˜í•˜ì§€ë§Œ, êµ¬í˜„ì„ ìž˜ ìƒê°í•˜ë©´ ê·¸ëŸ° íŠ¸ë¦­ì„ ì´ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
-    member functionÀÇ °³³äÀº,
+    member functionì˜ ê°œë…ì€,
 
-    1. Ã¹¹øÂ° ÀÎÀÚ¸¦ "this" pointer·Î ³Ñ°Ü ¹Þ´Â ÇÔ¼ö.
-    2. function mangling(decoration)¿¡ class ÀÌ¸§ÀÌ µé¾î°¡´Â ÇÔ¼ö
-    3. ÄÄÆÄÀÏ ¶§, class ³»ºÎ¿¡ ¼±¾ðµÈ º¯¼ö,ÇÔ¼ö¿¡ Á¢±Ù°¡´ÉÇÑ ÇÔ¼ö.
+    1. ì²«ë²ˆì§¸ ì¸ìžë¥¼ "this" pointerë¡œ ë„˜ê²¨ ë°›ëŠ” í•¨ìˆ˜.
+    2. function mangling(decoration)ì— class ì´ë¦„ì´ ë“¤ì–´ê°€ëŠ” í•¨ìˆ˜
+    3. ì»´íŒŒì¼ ë•Œ, class ë‚´ë¶€ì— ì„ ì–¸ëœ ë³€ìˆ˜,í•¨ìˆ˜ì— ì ‘ê·¼ê°€ëŠ¥í•œ í•¨ìˆ˜.
 
-    ÀÏ »ÓÀÔ´Ï´Ù.
+    ì¼ ë¿ìž…ë‹ˆë‹¤.
 
 
-    ¸â¹ö°¡ ÀÚ±âÀÚ½ÅÀ» Á×ÀÎ´Ù°í »ý°¢ÇÏÁö ¾Ê°í, Ã¹¹øÂ° ÀÎÀÚ¸¦ "´Ù·ç°í ÀÖ´Ù" Á¤µµ·Î »ý°¢ÇÏ½Ã¸é µË´Ï´Ù.
+    ë©¤ë²„ê°€ ìžê¸°ìžì‹ ì„ ì£½ì¸ë‹¤ê³  ìƒê°í•˜ì§€ ì•Šê³ , ì²«ë²ˆì§¸ ì¸ìžë¥¼ "ë‹¤ë£¨ê³  ìžˆë‹¤" ì •ë„ë¡œ ìƒê°í•˜ì‹œë©´ ë©ë‹ˆë‹¤.
 
-    ¸â¹ö º¯¼ö¸¦ ÀüÇô Á¢±ÙÇÏÁö ¾Ê´Â memberÇÔ¼ö°¡ ÀÖÀ¸¸é, null pointer¿¡¼­µµ ½ÇÇàÀÌ µË´Ï´Ù.
+    ë©¤ë²„ ë³€ìˆ˜ë¥¼ ì „í˜€ ì ‘ê·¼í•˜ì§€ ì•ŠëŠ” memberí•¨ìˆ˜ê°€ ìžˆìœ¼ë©´, null pointerì—ì„œë„ ì‹¤í–‰ì´ ë©ë‹ˆë‹¤.
 
     #include <stdio.h>
 
@@ -160,11 +160,11 @@ public:
             return 0;
     }
 
-    º¸Åë ÀÌ·± °æ¿ì¿¡´Â test¸¦ staticÀ¸·Î ¸¸µé¾î ÁÖÁö¿ä.
+    ë³´í†µ ì´ëŸ° ê²½ìš°ì—ëŠ” testë¥¼ staticìœ¼ë¡œ ë§Œë“¤ì–´ ì£¼ì§€ìš”.
 
-    staticÀº Ã¹¹øÂ° ÀÎÀÚ·Î this°¡ ³Ñ¾î°¡Áö ¾Ê´Â ÇÔ¼öÀÔ´Ï´Ù.
+    staticì€ ì²«ë²ˆì§¸ ì¸ìžë¡œ thisê°€ ë„˜ì–´ê°€ì§€ ì•ŠëŠ” í•¨ìˆ˜ìž…ë‹ˆë‹¤.
 
-    deleteµµ ¸¶Âù°¡Áö ÀÔ´Ï´Ù Ã¹¹øÂ° ÀÎÀÚ°¡ ´ÜÁö this pointerÀÎ ÇÔ¼ö¶ó°í »ý°¢ÇÏ½Ã¸éµË´Ï´Ù.
+    deleteë„ ë§ˆì°¬ê°€ì§€ ìž…ë‹ˆë‹¤ ì²«ë²ˆì§¸ ì¸ìžê°€ ë‹¨ì§€ this pointerì¸ í•¨ìˆ˜ë¼ê³  ìƒê°í•˜ì‹œë©´ë©ë‹ˆë‹¤.
 
 */
 
@@ -248,9 +248,9 @@ int main()
     ptr->flushItself();
 
     /**
-        gccÀÇ °æ¿ì "delete this" ÈÄ ¸â¹ö º¯¼ö¿¡ Á¢±ÙÀ» ÇÏ´Ï ¾Æ¹«·± ¹®Á¦°¡ ¹ß»ýÇÏÁö ¾Ê³×¿ä.
-        ±×·¸´Ù°í ¾ÈÀüÇÑ ÄÚµå¶ó°í È®½ÅÇÏ±â¿¡´Â ¹«¸®°¡ ÀÖÀ» °Í °°½À´Ï´Ù. 
-		´Ù¸¥ ÄÄÆÄÀÏ·¯¿¡¼­µµ È®ÀÎÀ» ÇØº¼ ÇÊ¿ä°¡ ÀÖÀ» °Í³×¿ä.
+        gccì˜ ê²½ìš° "delete this" í›„ ë©¤ë²„ ë³€ìˆ˜ì— ì ‘ê·¼ì„ í•˜ë‹ˆ ì•„ë¬´ëŸ° ë¬¸ì œê°€ ë°œìƒí•˜ì§€ ì•Šë„¤ìš”.
+        ê·¸ë ‡ë‹¤ê³  ì•ˆì „í•œ ì½”ë“œë¼ê³  í™•ì‹ í•˜ê¸°ì—ëŠ” ë¬´ë¦¬ê°€ ìžˆì„ ê²ƒ ê°™ìŠµë‹ˆë‹¤. 
+		ë‹¤ë¥¸ ì»´íŒŒì¼ëŸ¬ì—ì„œë„ í™•ì¸ì„ í•´ë³¼ í•„ìš”ê°€ ìžˆì„ ê²ƒë„¤ìš”.
     */
     cout << "ID : " << ptr->getID() << endl;
 
@@ -287,51 +287,51 @@ int main()
 
 
 
-===================== ºñÁ¤Àû ¸â¹öÇÔ¼ö Æ÷ÀÎÅÍ¿Í ÀÏ¹Ý ÇÔ¼ö Æ÷ÀÎÅÍÀÇ ´Ù¸¥Á¡ =====================
+===================== ë¹„ì •ì  ë©¤ë²„í•¨ìˆ˜ í¬ì¸í„°ì™€ ì¼ë°˜ í•¨ìˆ˜ í¬ì¸í„°ì˜ ë‹¤ë¥¸ì  =====================
 
 --------------------------------------------------------------------------------------
-°á·Ð : ANSI C++ ¿¡¼­´Â ºñÁ¤Àû ¸â¹ö ÇÔ¼öÀÇ ÁÖ¼Ò¸¦ Æ÷ÀÎÅÍ º¯¼ö¿¡ ÀúÀåÇÒ¼ö ¾ø½À´Ï´Ù.
+ê²°ë¡  : ANSI C++ ì—ì„œëŠ” ë¹„ì •ì  ë©¤ë²„ í•¨ìˆ˜ì˜ ì£¼ì†Œë¥¼ í¬ì¸í„° ë³€ìˆ˜ì— ì €ìž¥í• ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
 --------------------------------------------------------------------------------------
 
 
-32ºñÆ® ½Ã½ºÅÛ¿¡¼­ ÀÏ¹Ý ÇÔ¼ö ¿Í Å¬·¡½ºÀÇ Á¤Àû ¸â¹ö ÇÔ¼ö´Â 4¹ÙÀÌÆ® Æ÷ÀÎÅÍ °ªÇÏ³ª·Î Ç¥Çö°¡´ÉÇÕ´Ï´Ù.
+32ë¹„íŠ¸ ì‹œìŠ¤í…œì—ì„œ ì¼ë°˜ í•¨ìˆ˜ ì™€ í´ëž˜ìŠ¤ì˜ ì •ì  ë©¤ë²„ í•¨ìˆ˜ëŠ” 4ë°”ì´íŠ¸ í¬ì¸í„° ê°’í•˜ë‚˜ë¡œ í‘œí˜„ê°€ëŠ¥í•©ë‹ˆë‹¤.
 
-ÇÏÁö¸¸ Å¬·¡½ºÀÇ ºñÁ¤Àû ¸â¹öÇÔ¼öÀÇ °æ¿ì "¿ÀºêÁ§Æ®ÁÖ¼Ò + ºñÁ¤Àû ¸â¹ö ÇÔ¼ö ÁÖ¼Ò" ÇüÅÂ°¡ µÇ¾î¾ß Á¤»óÀûÀÎ Æ÷ÀÎÅÍ °ªÀ¸·Î¼­ ÀÇ¹Ì°¡ ÀÖ½À´Ï´Ù.
+í•˜ì§€ë§Œ í´ëž˜ìŠ¤ì˜ ë¹„ì •ì  ë©¤ë²„í•¨ìˆ˜ì˜ ê²½ìš° "ì˜¤ë¸Œì íŠ¸ì£¼ì†Œ + ë¹„ì •ì  ë©¤ë²„ í•¨ìˆ˜ ì£¼ì†Œ" í˜•íƒœê°€ ë˜ì–´ì•¼ ì •ìƒì ì¸ í¬ì¸í„° ê°’ìœ¼ë¡œì„œ ì˜ë¯¸ê°€ ìžˆìŠµë‹ˆë‹¤.
 
-ºñÁ¤Àû ¸â¹ö ÇÔ¼ö³»ºÎ¿¡¼­ Å¬·¡½º ¸â¹ö º¯¼ö¸¦ ÂüÁ¶ÇÏ´Â ÄÚµå´Â Ç×»ó ¿ÀºêÁ§Æ®ÀÇ ÁÖ¼Ò¸¦ ¾Ë°í ÀÖ¾î¾ß ÇÏ±â¶§¹®ÀÔ´Ï´Ù.
+ë¹„ì •ì  ë©¤ë²„ í•¨ìˆ˜ë‚´ë¶€ì—ì„œ í´ëž˜ìŠ¤ ë©¤ë²„ ë³€ìˆ˜ë¥¼ ì°¸ì¡°í•˜ëŠ” ì½”ë“œëŠ” í•­ìƒ ì˜¤ë¸Œì íŠ¸ì˜ ì£¼ì†Œë¥¼ ì•Œê³  ìžˆì–´ì•¼ í•˜ê¸°ë•Œë¬¸ìž…ë‹ˆë‹¤.
 
-µû¶ó¼­ ´ÙÀ½°ú °°Àº ÄÚµå´Â
+ë”°ë¼ì„œ ë‹¤ìŒê³¼ ê°™ì€ ì½”ë“œëŠ”
 
 obj.funcA();
 
-ÄÄÆÄÀÏ·¯°¡ funcA ¸â¹öÇÔ¼ö¸¦ È£ÃâÇÏ±â À§ÇØ objÀÇ ÁÖ¼Ò¿Í funcA ¸â¹öÇÔ¼öÀÇ ÁÖ¼Ò ¸ðµÎ¸¦ ¾Ë°í ÀÖ¾î¾ß È£Ãâ°¡´ÉÇÕ´Ï´Ù.
+ì»´íŒŒì¼ëŸ¬ê°€ funcA ë©¤ë²„í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ê¸° ìœ„í•´ objì˜ ì£¼ì†Œì™€ funcA ë©¤ë²„í•¨ìˆ˜ì˜ ì£¼ì†Œ ëª¨ë‘ë¥¼ ì•Œê³  ìžˆì–´ì•¼ í˜¸ì¶œê°€ëŠ¥í•©ë‹ˆë‹¤.
 
 MyClass::funcA();
 
-¿Í °°Àº ÇÔ¼öÈ£ÃâÄÚµå´Â ÄÄÆÄÀÏ·¯°¡ ´Ü¼øÈ÷ MyClass ³×ÀÓ½ºÆäÀÌ½ºÀÇ funcA ÇÔ¼ö ÁÖ¼Ò¸¸ ¾Ë°íÀÖ¾îµµ È£Ãâ°¡´ÉÇÕ´Ï´Ù.
+ì™€ ê°™ì€ í•¨ìˆ˜í˜¸ì¶œì½”ë“œëŠ” ì»´íŒŒì¼ëŸ¬ê°€ ë‹¨ìˆœížˆ MyClass ë„¤ìž„ìŠ¤íŽ˜ì´ìŠ¤ì˜ funcA í•¨ìˆ˜ ì£¼ì†Œë§Œ ì•Œê³ ìžˆì–´ë„ í˜¸ì¶œê°€ëŠ¥í•©ë‹ˆë‹¤.
 
-µû¶ó¼­ ANSI C++ ¿¡¼­´Â ºñÁ¤Àû ¸â¹ö ÇÔ¼öÀÇ ÁÖ¼Ò¸¦ Æ÷ÀÎÅÍ º¯¼ö¿¡ ÀúÀåÇÒ¼ö ¾ø½À´Ï´Ù.
+ë”°ë¼ì„œ ANSI C++ ì—ì„œëŠ” ë¹„ì •ì  ë©¤ë²„ í•¨ìˆ˜ì˜ ì£¼ì†Œë¥¼ í¬ì¸í„° ë³€ìˆ˜ì— ì €ìž¥í• ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
 
-32ºñÆ® ½Ã½ºÅÛ¿¡¼­ ¿ÀºêÁ§Æ® ÁÖ¼Ò + ÇÔ¼ö ÁÖ¼ÒÀÇ 8¹ÙÀÌÆ®°ªÀ» 4¹ÙÀÌÆ® Æ÷ÀÎÅÍ º¯¼ö¿¡ ³ÖÀ»¼ö°¡ ¾ø±â ¶§¹®ÀÔ´Ï´Ù.
+32ë¹„íŠ¸ ì‹œìŠ¤í…œì—ì„œ ì˜¤ë¸Œì íŠ¸ ì£¼ì†Œ + í•¨ìˆ˜ ì£¼ì†Œì˜ 8ë°”ì´íŠ¸ê°’ì„ 4ë°”ì´íŠ¸ í¬ì¸í„° ë³€ìˆ˜ì— ë„£ì„ìˆ˜ê°€ ì—†ê¸° ë•Œë¬¸ìž…ë‹ˆë‹¤.
 
-º¼·£µå °è¿­ (Áö±Ý ÀÌ¸§Àº ¿¥¹ÙÄ«µ¥·Î) C++ ÄÄÆÄÀÏ·¯´Â ÀÌ·¯ÇÑ °æ¿ì¸¦ ´ëºñÇÏ¿© ¸â¹öÇÔ¼ö Æ÷ÀÎÅÍ Å¸ÀÔÀ» Á¦°øÇÕ´Ï´Ù.
+ë³¼ëžœë“œ ê³„ì—´ (ì§€ê¸ˆ ì´ë¦„ì€ ì— ë°”ì¹´ë°ë¡œ) C++ ì»´íŒŒì¼ëŸ¬ëŠ” ì´ëŸ¬í•œ ê²½ìš°ë¥¼ ëŒ€ë¹„í•˜ì—¬ ë©¤ë²„í•¨ìˆ˜ í¬ì¸í„° íƒ€ìž…ì„ ì œê³µí•©ë‹ˆë‹¤.
 
-Áö±Ý Àß ±â¾ïÀÌ ¾È³ª´Âµ¥ 32ºñÆ® ½Ã½ºÅÛ¿¡¼­ 8¹ÙÀÌÆ® Å©±â¸¦ °¡Áý´Ï´Ù. ±×¸®°í ´ç¿¬È÷ ÇØ´ç Æ÷ÀÎÅÍ·Î ¸â¹öÇÔ¼ö¸¦ È£ÃâÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ì§€ê¸ˆ ìž˜ ê¸°ì–µì´ ì•ˆë‚˜ëŠ”ë° 32ë¹„íŠ¸ ì‹œìŠ¤í…œì—ì„œ 8ë°”ì´íŠ¸ í¬ê¸°ë¥¼ ê°€ì§‘ë‹ˆë‹¤. ê·¸ë¦¬ê³  ë‹¹ì—°ížˆ í•´ë‹¹ í¬ì¸í„°ë¡œ ë©¤ë²„í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
-Å°¿öµå°¡ Áö±Ý ±â¾ïÀÌ ¾È³ª´Âµ¥, Ã£¾Æº¸½Ã¸é ±Ý¹æ ¾Æ½Ç¼ö ÀÖÀ»°Ì´Ï´Ù.
+í‚¤ì›Œë“œê°€ ì§€ê¸ˆ ê¸°ì–µì´ ì•ˆë‚˜ëŠ”ë°, ì°¾ì•„ë³´ì‹œë©´ ê¸ˆë°© ì•„ì‹¤ìˆ˜ ìžˆì„ê²ë‹ˆë‹¤.
 
-µû¶ó¼­ ¿øÇÏ½Ã´Â ÀÛ¾÷Àº º¼·£µå»çÀÇ C++ builder ¿¡¼­´Â ½±°Ô °¡´ÉÇÕ´Ï´Ù.
+ë”°ë¼ì„œ ì›í•˜ì‹œëŠ” ìž‘ì—…ì€ ë³¼ëžœë“œì‚¬ì˜ C++ builder ì—ì„œëŠ” ì‰½ê²Œ ê°€ëŠ¥í•©ë‹ˆë‹¤.
 
-MS °è¿­ÀÇ Visual C++ ¿¡¼­´Â ÀÏ¹ÝÀûÀ¸·Î ÇÒ¼ö ¾ø°í, ÀÎ¶óÀÎ ¾î¼Àºí¸® ÄÚµå¸¦ Á÷Á¢ ÀÛ¼ºÇÏ¼Å¾ß ÇÕ´Ï´Ù.
+MS ê³„ì—´ì˜ Visual C++ ì—ì„œëŠ” ì¼ë°˜ì ìœ¼ë¡œ í• ìˆ˜ ì—†ê³ , ì¸ë¼ì¸ ì–´ì…ˆë¸”ë¦¬ ì½”ë“œë¥¼ ì§ì ‘ ìž‘ì„±í•˜ì…”ì•¼ í•©ë‹ˆë‹¤.
 
-Visual C++ ÀÇ ATL ¼Ò½º¸¦ parkon ´ÔÀÌ ¿øÇÏ½Ã´Â ÀÛ¾÷À» ÇÏ±â À§ÇØ ½éÅ·ÀÌ¶ó´Â ±â¼úÀ» »ç¿ëÇÕ´Ï´Ù.
+Visual C++ ì˜ ATL ì†ŒìŠ¤ë¥¼ parkon ë‹˜ì´ ì›í•˜ì‹œëŠ” ìž‘ì—…ì„ í•˜ê¸° ìœ„í•´ ì½í‚¹ì´ë¼ëŠ” ê¸°ìˆ ì„ ì‚¬ìš©í•©ë‹ˆë‹¤.
 
-ÀÎ¶óÀÎ¾î¼Àºí¸®¸¦ »ç¿ëÇÑ Æ®¸¯ÀÎµ¥¿ä. ÄÚµå ÇÁ·ÎÁ§Æ®ÀÇ atl ±âÃÊ°­ÁÂ(¸î°³ ¾ÈµË´Ï´Ù)¸¦ Ã£¾Æº¸½Ã¸é Àß ±â¼úµÇ¾î ÀÖ´Â °­ÁÂ¸¦ Ã£¾Æ º¸½Ç¼ö ÀÖ½À´Ï´Ù.
+ì¸ë¼ì¸ì–´ì…ˆë¸”ë¦¬ë¥¼ ì‚¬ìš©í•œ íŠ¸ë¦­ì¸ë°ìš”. ì½”ë“œ í”„ë¡œì íŠ¸ì˜ atl ê¸°ì´ˆê°•ì¢Œ(ëª‡ê°œ ì•ˆë©ë‹ˆë‹¤)ë¥¼ ì°¾ì•„ë³´ì‹œë©´ ìž˜ ê¸°ìˆ ë˜ì–´ ìžˆëŠ” ê°•ì¢Œë¥¼ ì°¾ì•„ ë³´ì‹¤ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
 
 ================================================================
 
-Ãß°¡ ³»¿ë : °¡»óÇÔ¼ö¿Í »ó¼Ó°³³äÀ¸·Î ÀÎÇÏ¿© ½ÇÁ¦·Î ½±Áö ¾Ê´Ù.
+ì¶”ê°€ ë‚´ìš© : ê°€ìƒí•¨ìˆ˜ì™€ ìƒì†ê°œë…ìœ¼ë¡œ ì¸í•˜ì—¬ ì‹¤ì œë¡œ ì‰½ì§€ ì•Šë‹¤.
 
 Suppose the function that Mehrdad wants the actual location of, happens to be a virtual function.
 

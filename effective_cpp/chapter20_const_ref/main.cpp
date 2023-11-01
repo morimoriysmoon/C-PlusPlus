@@ -48,7 +48,7 @@ private:
 void UseBasedInsteadOfDerived(Based _base)
 {
     /**
-    ¸Å°³º¯¼ö°¡ BasedÀÌ¹Ç·Î º¹»ç »ı¼ºµÈ ¸Å°³º¯¼ö ¿ª½Ã BasedÅ¸ÀÔÀÌ´Ù.
+    ë§¤ê°œë³€ìˆ˜ê°€ Basedì´ë¯€ë¡œ ë³µì‚¬ ìƒì„±ëœ ë§¤ê°œë³€ìˆ˜ ì—­ì‹œ Basedíƒ€ì…ì´ë‹¤.
     */
 
     cout << " ID : " << _base.Id() << endl;
@@ -74,13 +74,13 @@ int main()
     Derived der(0, "derived", "ls -al");
 
     /**
-    ¸Å°³º¯¼ö°¡ BasedÀÌ¹Ç·Î º¹»ç »ı¼ºµÈ ¸Å°³º¯¼ö ¿ª½Ã BasedÅ¸ÀÔÀÌ´Ù.
-    ÀÌ·± Çàµ¿Àº Àı´ë ÇÏ¸é ¾ÈµÈ´Ù.
+    ë§¤ê°œë³€ìˆ˜ê°€ Basedì´ë¯€ë¡œ ë³µì‚¬ ìƒì„±ëœ ë§¤ê°œë³€ìˆ˜ ì—­ì‹œ Basedíƒ€ì…ì´ë‹¤.
+    ì´ëŸ° í–‰ë™ì€ ì ˆëŒ€ í•˜ë©´ ì•ˆëœë‹¤.
     */
     UseBasedInsteadOfDerived(der);
 
 
-    /** Æ÷ÀÎÅÍ¸¦ »ç¿ëÇÏ¸é ¹®Á¦¾ø´Ù.*/
+    /** í¬ì¸í„°ë¥¼ ì‚¬ìš©í•˜ë©´ ë¬¸ì œì—†ë‹¤.*/
     UseBasedPtrInsteadOfDerived(&der);
 
     return 0;

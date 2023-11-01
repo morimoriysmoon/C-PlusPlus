@@ -4,28 +4,28 @@
 using namespace std;
 
 /**
-C++¿¡¼­ º¯¼ö/ÇÔ¼ö °Ë»öÀÇ ±ÔÄ¢ (ÀÌ¸§ÀÇ Áß¿ä¼º)
+C++ì—ì„œ ë³€ìˆ˜/í•¨ìˆ˜ ê²€ìƒ‰ì˜ ê·œì¹™ (ì´ë¦„ì˜ ì¤‘ìš”ì„±)
 
-    Áö¿ª º¯¼ö >>>>>>>> Àü¿ª º¯¼ö
+    ì§€ì—­ ë³€ìˆ˜ >>>>>>>> ì „ì—­ ë³€ìˆ˜
 
-    ÃÖÃÊ ÀÚ½ÅÀÇ Áö¿ª ¹üÀ§ºÎÅÍ ÀÌ¸§À» Ã£°í ¾øÀ¸¸é Àü¿ª¿¡¼­ Ã£´Â´Ù.
-    (ÀÚ½ÅÀÇ Áö¿ª ¹üÀ§¿¡¼­ ÀÌ¸§À» Ã£¾Ò´Ù¸é ´õ ÀÌ»ó Ã£Áö ¾Ê´Â´Ù.)
+    ìµœì´ˆ ìžì‹ ì˜ ì§€ì—­ ë²”ìœ„ë¶€í„° ì´ë¦„ì„ ì°¾ê³  ì—†ìœ¼ë©´ ì „ì—­ì—ì„œ ì°¾ëŠ”ë‹¤.
+    (ìžì‹ ì˜ ì§€ì—­ ë²”ìœ„ì—ì„œ ì´ë¦„ì„ ì°¾ì•˜ë‹¤ë©´ ë” ì´ìƒ ì°¾ì§€ ì•ŠëŠ”ë‹¤.)
 
-    ÀÌ ¶§ °Ë»ö ±âÁØÀº ÇÔ¼ö/º¯¼öÀÇ ÀÌ¸§ÀÌ¸ç, ÇÔ¼öÀÇ °æ¿ì ¸Å°³º¯¼ö´Â º¸Áöµµ ¾Ê´Â´Ù.
-    ÀÚ½Ä Å¬·¡½º¿¡¼­ ºÎ¸ð Å¬·¡½º¿¡ Á¸ÀçÇÏ´Â ÇÔ¼ö/º¯¼ö¿Í µ¿ÀÏÇÑ ÀÌ¸§À» »ç¿ëÇÒ ¶§´Â ÁÖÀÇÇØ¾ß ÇÑ´Ù.
+    ì´ ë•Œ ê²€ìƒ‰ ê¸°ì¤€ì€ í•¨ìˆ˜/ë³€ìˆ˜ì˜ ì´ë¦„ì´ë©°, í•¨ìˆ˜ì˜ ê²½ìš° ë§¤ê°œë³€ìˆ˜ëŠ” ë³´ì§€ë„ ì•ŠëŠ”ë‹¤.
+    ìžì‹ í´ëž˜ìŠ¤ì—ì„œ ë¶€ëª¨ í´ëž˜ìŠ¤ì— ì¡´ìž¬í•˜ëŠ” í•¨ìˆ˜/ë³€ìˆ˜ì™€ ë™ì¼í•œ ì´ë¦„ì„ ì‚¬ìš©í•  ë•ŒëŠ” ì£¼ì˜í•´ì•¼ í•œë‹¤.
 
-    "ÀÌ¸§À» ÈÉÃÄ°¡´Â ÀÚ´Â »©¾Ñ±ä »ç¶÷¸¸ ºóÅÐÅÍ¸®·Î ¸¸µé°í ¸¶´Â °ÍÀÔ´Ï´Ù."
+    "ì´ë¦„ì„ í›”ì³ê°€ëŠ” ìžëŠ” ë¹¼ì•—ê¸´ ì‚¬ëžŒë§Œ ë¹ˆí„¸í„°ë¦¬ë¡œ ë§Œë“¤ê³  ë§ˆëŠ” ê²ƒìž…ë‹ˆë‹¤."
 
 
-    public: »ó¼ÓÀÌ¶ó ÇÏ¸é, Derived ´Â Base ÀÌ´Ù¸¦ ¶æÇÑ´Ù.
-    ±×·¯¹Ç·Î Derived¿¡¼­ BaseÀÇ °ÍµéÀ» ÀÌ¸§À» °¡·Á¼­ »ó¼Ó¹Þ°Ú´Ù´Â »ý°¢Àº public: »ó¼Ó¿¡ À§¹èµÈ´Ù.
-    °¡·Á¼­ ¹Þ°Ú´Ù´Â°Í ÀÚÃ¼°¡ ÀÌ¹Ì ´Ù¸¥ Å¬·¡½º¸¦ ¶æÇÏ±â ¶§¹®ÀÌ´Ù.
-    public: »ó¼ÓÀÌ¶ó¸é, ´Ù »ó¼ÓÇØ¾ß ÇÑ´Ù.
+    public: ìƒì†ì´ë¼ í•˜ë©´, Derived ëŠ” Base ì´ë‹¤ë¥¼ ëœ»í•œë‹¤.
+    ê·¸ëŸ¬ë¯€ë¡œ Derivedì—ì„œ Baseì˜ ê²ƒë“¤ì„ ì´ë¦„ì„ ê°€ë ¤ì„œ ìƒì†ë°›ê² ë‹¤ëŠ” ìƒê°ì€ public: ìƒì†ì— ìœ„ë°°ëœë‹¤.
+    ê°€ë ¤ì„œ ë°›ê² ë‹¤ëŠ”ê²ƒ ìžì²´ê°€ ì´ë¯¸ ë‹¤ë¥¸ í´ëž˜ìŠ¤ë¥¼ ëœ»í•˜ê¸° ë•Œë¬¸ì´ë‹¤.
+    public: ìƒì†ì´ë¼ë©´, ë‹¤ ìƒì†í•´ì•¼ í•œë‹¤.
 
-    ÇÏÁö¸¸ ÀÎ»ý»ç°¡ ±×·¸°Ô °£´ÜÇÏÁö¸¸Àº ¾Ê´Ù.
-    ÀÌ¸§À» °¡·Á¼­ ±¸ÇöÇÏ°íÀÚ ÇÒ¶§´Â ¿¹½ÃÄÚµå4¿¡¼­ ³ªÅ¸³½°ÍÃ³·³ private: ·Î »ó¼ÓÇÏ¿©, ¸í½ÃÈ£ÃâÀ» ÇÏ¸é ±¦ÂúÀ» µí ½Í´Ù.
-    (ÁÖ¼®À» ²À ´Þ¾Æ °¡µ¶¼º¿¡ µµ¿òÀ» ÁÖ´Â°ÍÀÌ ÁÁÀ» µí ½Í´Ù..)
-    ÇÏÁö¸¸ ¸â¹ö º¯¼öµµ private: ÀÌ±â ¶§¹®¿¡... ÀÌ·±Àú·± °í¹ÎÀÌ ¸¹´Ù.
+    í•˜ì§€ë§Œ ì¸ìƒì‚¬ê°€ ê·¸ë ‡ê²Œ ê°„ë‹¨í•˜ì§€ë§Œì€ ì•Šë‹¤.
+    ì´ë¦„ì„ ê°€ë ¤ì„œ êµ¬í˜„í•˜ê³ ìž í• ë•ŒëŠ” ì˜ˆì‹œì½”ë“œ4ì—ì„œ ë‚˜íƒ€ë‚¸ê²ƒì²˜ëŸ¼ private: ë¡œ ìƒì†í•˜ì—¬, ëª…ì‹œí˜¸ì¶œì„ í•˜ë©´ ê´œì°®ì„ ë“¯ ì‹¶ë‹¤.
+    (ì£¼ì„ì„ ê¼­ ë‹¬ì•„ ê°€ë…ì„±ì— ë„ì›€ì„ ì£¼ëŠ”ê²ƒì´ ì¢‹ì„ ë“¯ ì‹¶ë‹¤..)
+    í•˜ì§€ë§Œ ë©¤ë²„ ë³€ìˆ˜ë„ private: ì´ê¸° ë•Œë¬¸ì—... ì´ëŸ°ì €ëŸ° ê³ ë¯¼ì´ ë§Žë‹¤.
 */
 
 class Base
@@ -41,16 +41,16 @@ public:
     string name;
 };
 
-class Derived : private Base /// private »ó¼ÓÀÌ´Ù.
+class Derived : private Base /// private ìƒì†ì´ë‹¤.
 {
 public:
 
-    /// ÀÌ¸§À» Ã£´Â ¿µ¿ªÀ» Base±îÁö ³ÐÈ÷´Â È¿°ú¸¦ °¡Áø´Ù.
+    /// ì´ë¦„ì„ ì°¾ëŠ” ì˜ì—­ì„ Baseê¹Œì§€ ë„“ížˆëŠ” íš¨ê³¼ë¥¼ ê°€ì§„ë‹¤.
     using Base::mf1;
 
-    virtual void mf1(void) /// forwarding functionÀÌ¶ó ºÒ¸°´Ù.
+    virtual void mf1(void) /// forwarding functionì´ë¼ ë¶ˆë¦°ë‹¤.
     {
-        Base::mf1(0); /// EC++ 244ÆäÀÌÁö. Link error ¹ß»ýÇÔ.
+        Base::mf1(0); /// EC++ 244íŽ˜ì´ì§€. Link error ë°œìƒí•¨.
     }
 };
 
@@ -64,27 +64,27 @@ int main()
     /**
         compile error : no matching function for call to 'Derived::mf1(int)'
 
-        »ó½ÄÀûÀ¸·Î »ý°¢ÇØ º¸¸é, ÇÔ¼ö mf1(int)´Â ºÎ¸ð Å¬·¡½º¿¡ Á¸ÀçÇÏ¹Ç·Î ¾Æ¹« ¹®Á¦°¡ ¾ø¾î¾ß ÇÑ´Ù.
-        ÇÏÁö¸¸ ¿¡·¯°¡ ³­´Ù.
+        ìƒì‹ì ìœ¼ë¡œ ìƒê°í•´ ë³´ë©´, í•¨ìˆ˜ mf1(int)ëŠ” ë¶€ëª¨ í´ëž˜ìŠ¤ì— ì¡´ìž¬í•˜ë¯€ë¡œ ì•„ë¬´ ë¬¸ì œê°€ ì—†ì–´ì•¼ í•œë‹¤.
+        í•˜ì§€ë§Œ ì—ëŸ¬ê°€ ë‚œë‹¤.
 
-        # ÀÌÀ¯
-            1) mf1ÀÌ¶ó´Â ÀÌ¸§À¸·Î ÀÚ½ÅÀÇ Áö¿ª³»¿¡¼­ºÎÅÍ °Ë»öÇÔ.
-            2) ÀÚ½ÅÀÇ Áö¿ª³»¿¡ mf1(void)°¡ Á¸ÀçÇÔ(ÀÌ ¶§ ¸Å°³º¯¼ö´Â È®ÀÎÇÏÁö ¾ÊÀ½)À» È®ÀÎÇÑ´Ù.
-            3) »ç¿ëÀÚ°¡ È£ÃâÇÑ ÇÔ¼ö´Â mf1(void)°¡ ¾Æ´Ñ mf1(int)ÀÓ.
-            4) mf1(int)´Â °Ë»öÇÑ ÇÔ¼ö ¸®½ºÆ®¿¡ ¾øÀ½.
-            5) ÀÌ·Î ÀÎÇØ compile error ¹ß»ýÇÔ.
+        # ì´ìœ 
+            1) mf1ì´ë¼ëŠ” ì´ë¦„ìœ¼ë¡œ ìžì‹ ì˜ ì§€ì—­ë‚´ì—ì„œë¶€í„° ê²€ìƒ‰í•¨.
+            2) ìžì‹ ì˜ ì§€ì—­ë‚´ì— mf1(void)ê°€ ì¡´ìž¬í•¨(ì´ ë•Œ ë§¤ê°œë³€ìˆ˜ëŠ” í™•ì¸í•˜ì§€ ì•ŠìŒ)ì„ í™•ì¸í•œë‹¤.
+            3) ì‚¬ìš©ìžê°€ í˜¸ì¶œí•œ í•¨ìˆ˜ëŠ” mf1(void)ê°€ ì•„ë‹Œ mf1(int)ìž„.
+            4) mf1(int)ëŠ” ê²€ìƒ‰í•œ í•¨ìˆ˜ ë¦¬ìŠ¤íŠ¸ì— ì—†ìŒ.
+            5) ì´ë¡œ ì¸í•´ compile error ë°œìƒí•¨.
 
-        compile error¸¦ ¾ø¾Ö±â À§ÇØ¼­´Â using Base::mf1; »ç¿ëÇÏ¿© ÀÌ¸§À» Ã£´Â ¿µ¿ªÀ» ³ÐÇô ÁØ´Ù(ÀÚ½ÅÀÇ ¿ÜºÎ±îÁö °Ë»öÇÏµµ·Ï).
+        compile errorë¥¼ ì—†ì• ê¸° ìœ„í•´ì„œëŠ” using Base::mf1; ì‚¬ìš©í•˜ì—¬ ì´ë¦„ì„ ì°¾ëŠ” ì˜ì—­ì„ ë„“í˜€ ì¤€ë‹¤(ìžì‹ ì˜ ì™¸ë¶€ê¹Œì§€ ê²€ìƒ‰í•˜ë„ë¡).
     */
     d.mf1(1);
 
     /**
         compile error : inaccessible due to private inheritance
 
-        ¿©±â¼­ Áú¹®:
+        ì—¬ê¸°ì„œ ì§ˆë¬¸:
 
-            ¸â¹ö ÇÔ¼ö´Â Á¢±Ù °¡´É!
-            ¸â¹ö º¯¼ö´Â Á¢±Ù ºÒ°¡´É? ¿Ö????????
+            ë©¤ë²„ í•¨ìˆ˜ëŠ” ì ‘ê·¼ ê°€ëŠ¥!
+            ë©¤ë²„ ë³€ìˆ˜ëŠ” ì ‘ê·¼ ë¶ˆê°€ëŠ¥? ì™œ????????
     */
     cout << "base name : " << d.name << endl;
 

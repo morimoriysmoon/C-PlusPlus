@@ -32,14 +32,14 @@ class Derived : public Base
 public:
 
     /**
-        ºñ°¡»ó ÇÔ¼ö¸¦ ÀçÁ¤ÀÇ ÇÏ¿´´Ù.
-        ºñ°¡»ó ÇÔ¼ö´Â static bindingÀÌ ÀÌ·ç¾îÁö¹Ç·Î,
-        pointerÀÇ data type¿¡ ÇØ´çÇÏ´Â classÀÇ method°¡ È£ÃâµÈ´Ù.
-        ½ÇÁ¦ pointer°¡ °¡¸£Å°´Â class¿Í ¹«°üÇÏ´Ù.
-        ÀÌÁ¡ÀÌ dynamic binding°úÀÇ Â÷ÀÌÁ¡ÀÌ´Ù.
+        ë¹„ê°€ìƒ í•¨ìˆ˜ë¥¼ ì¬ì •ì˜ í•˜ì˜€ë‹¤.
+        ë¹„ê°€ìƒ í•¨ìˆ˜ëŠ” static bindingì´ ì´ë£¨ì–´ì§€ë¯€ë¡œ,
+        pointerì˜ data typeì— í•´ë‹¹í•˜ëŠ” classì˜ methodê°€ í˜¸ì¶œëœë‹¤.
+        ì‹¤ì œ pointerê°€ ê°€ë¥´í‚¤ëŠ” classì™€ ë¬´ê´€í•˜ë‹¤.
+        ì´ì ì´ dynamic bindingê³¼ì˜ ì°¨ì´ì ì´ë‹¤.
 
-        static  : compile½ÃÁ¡¿¡ »ç¿ë/È£ÃâÇÒ °ÍÀ» °áÁ¤ÇÑ´Ù.
-        dynamic : running½ÃÁ¡¿¡ »ç¿ë/È£ÃâÇÒ °ÍÀ» °áÁ¤ÇÑ´Ù.
+        static  : compileì‹œì ì— ì‚¬ìš©/í˜¸ì¶œí•  ê²ƒì„ ê²°ì •í•œë‹¤.
+        dynamic : runningì‹œì ì— ì‚¬ìš©/í˜¸ì¶œí•  ê²ƒì„ ê²°ì •í•œë‹¤.
     */
 
     void PrintAboutMe();
@@ -155,16 +155,16 @@ int main()
     Base* ptrB = &x;
 
     cout << "Derived* : " ;
-    ptrD->PrintAboutMe(); /// Derived*¿¡ static bindingÀÌ ÀÏ¾î³².
+    ptrD->PrintAboutMe(); /// Derived*ì— static bindingì´ ì¼ì–´ë‚¨.
 
     cout << "Base* : ";
-    ptrB->PrintAboutMe(); /// Base*¿¡ static bindingÀÌ ÀÏ¾î³².
+    ptrB->PrintAboutMe(); /// Base*ì— static bindingì´ ì¼ì–´ë‚¨.
 
     cout << "Base* [virtual]: ";
-    ptrB->PrintAboutMe_Virtual(); /// virtual ÇÔ¼öÀÌ¹Ç·Î dynamic bindingÀÌ ÀÏ¾î³².
+    ptrB->PrintAboutMe_Virtual(); /// virtual í•¨ìˆ˜ì´ë¯€ë¡œ dynamic bindingì´ ì¼ì–´ë‚¨.
 
 
-    /// Å×½ºÆ® ÄÚµå
+    /// í…ŒìŠ¤íŠ¸ ì½”ë“œ
     PyramidMaker maker(60);
     maker.printPyramid_leftAligned();
     maker.printPyramid_rightAligned();

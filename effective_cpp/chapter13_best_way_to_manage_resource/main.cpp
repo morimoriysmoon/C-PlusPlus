@@ -77,23 +77,23 @@ void dummyFunc(void)
 
     /**
 
-    ÀÌ·± Àú·± µ¿ÀÛÀ» ¼öÇàÇÑ´Ù.
-    ÇÏÁö¸¸, ¿¹±âÄ¡¾Ê°Ô ÇÔ¼ö°¡ °­Á¦·Î Á¾·áµÉ ¼ö ÀÖ´Âµ¥,
-    ÀÌ °æ¿ì, ¾Æ·¡ÀÇ delete¹®ÀÌ È£ÃâµÇÁö ¾Ê¾Æ memory leakÀÌ ¹ß»ıÇÑ´Ù.
-    ÀÌ¸¦ ¸·±â À§ÇØ¼­ º°µµÀÇ class¸¦ »ç¿ëÇÑ´Ù.
+    ì´ëŸ° ì €ëŸ° ë™ì‘ì„ ìˆ˜í–‰í•œë‹¤.
+    í•˜ì§€ë§Œ, ì˜ˆê¸°ì¹˜ì•Šê²Œ í•¨ìˆ˜ê°€ ê°•ì œë¡œ ì¢…ë£Œë  ìˆ˜ ìˆëŠ”ë°,
+    ì´ ê²½ìš°, ì•„ë˜ì˜ deleteë¬¸ì´ í˜¸ì¶œë˜ì§€ ì•Šì•„ memory leakì´ ë°œìƒí•œë‹¤.
+    ì´ë¥¼ ë§‰ê¸° ìœ„í•´ì„œ ë³„ë„ì˜ classë¥¼ ì‚¬ìš©í•œë‹¤.
 
     */
 
     delete ptr;
 
 
-    /** Ã¹¹øÂ° ¹æ¹ı : unique_ptr */
+    /** ì²«ë²ˆì§¸ ë°©ë²• : unique_ptr */
     cout << "[Using std::unique_ptr]" << endl;
     std::unique_ptr<Investment> uPtr(getInvestment(Investment::TYPE_AAA));
     //std::unique_ptr<Investment> uPtr_copied(uPtr); /// compile error : L-value cannot be used
     //std::unique_ptr<Investment> uPtr_copied = uPtr; /// compile error : L-value cannot be used
 
-    /// std::move()ÀÇ ¿ªÇÒ : ÀÔ·Â ÆÄ¶ó¹ÌÅÍ¸¦ R-value·Î ¸¸µé¾î ÁØ´Ù.
+    /// std::move()ì˜ ì—­í•  : ì…ë ¥ íŒŒë¼ë¯¸í„°ë¥¼ R-valueë¡œ ë§Œë“¤ì–´ ì¤€ë‹¤.
     /// http://en.cppreference.com/w/cpp/utility/move
     /// http://egloos.zum.com/frompt/v/2765424
     /// http://blog.mimu.me/understand-rvalue-reference-ko.html
@@ -102,7 +102,7 @@ void dummyFunc(void)
     cout << "[unique_ptr] Type: " << uPtr_copied->getType() << endl;
 
 
-    /** µÎ¹øÂ° ¹æ¹ı : auto_ptr */
+    /** ë‘ë²ˆì§¸ ë°©ë²• : auto_ptr */
     cout << "[Using std::auto_ptr]" << endl;
     std::auto_ptr<Investment> aPtr(getInvestment(Investment::TYPE_BBB)); // auto_ptr was deprecated
     std::auto_ptr<Investment> aPtr_copied = aPtr;
@@ -110,7 +110,7 @@ void dummyFunc(void)
     cout << "[auto_ptr] Type: " << aPtr_copied->getType() << endl;
 
 
-    /** ¼¼¹øÂ° ¹æ¹ı : shared_ptr */
+    /** ì„¸ë²ˆì§¸ ë°©ë²• : shared_ptr */
     cout << "[Using std::shared_ptr]" << endl;
     std::shared_ptr<Investment> sPtr(getInvestment(Investment::TYPE_CCC));
     std::shared_ptr<Investment> sPtr_copied = sPtr;
@@ -118,20 +118,20 @@ void dummyFunc(void)
     cout << "[shared_ptr] Type: " << sPtr_copied->getType() << endl;
 
     /**
-        À§ ¼¼°¡Áö ¹æ¹ıÀÇ °øÅëÁ¡Àº ¾Æ·¡¿Í °°´Ù.
+        ìœ„ ì„¸ê°€ì§€ ë°©ë²•ì˜ ê³µí†µì ì€ ì•„ë˜ì™€ ê°™ë‹¤.
 
-        1. ÀÚ¿øÀ» È¹µæÇÑ ÈÄ¿¡ ÀÚ¿ø °ü¸® °´Ã¼¿¡°Ô ³Ñ±é´Ï´Ù. (Resource Acquisition Is Initialization : RAII)
-        2. ÀÚ¿ø °ü¸® °´Ã¼´Â ÀÚ½ÅÀÇ ¼Ò¸êÀÚ¸¦ »ç¿ëÇÏ¿© ÀÚ¿øÀÌ È®½ÇÈ÷ ÇØÁ¦µÇµµ·Ï ÇÕ´Ï´Ù.
+        1. ìì›ì„ íšë“í•œ í›„ì— ìì› ê´€ë¦¬ ê°ì²´ì—ê²Œ ë„˜ê¹ë‹ˆë‹¤. (Resource Acquisition Is Initialization : RAII)
+        2. ìì› ê´€ë¦¬ ê°ì²´ëŠ” ìì‹ ì˜ ì†Œë©¸ìë¥¼ ì‚¬ìš©í•˜ì—¬ ìì›ì´ í™•ì‹¤íˆ í•´ì œë˜ë„ë¡ í•©ë‹ˆë‹¤.
     */
 
 
-    /** [»çÁ·] auto_ptr¸¦ unique_ptr·Î º¯°æÇÒ ¶§ ÁÖÀÇÇÒ Á¡ :
+    /** [ì‚¬ì¡±] auto_ptrë¥¼ unique_ptrë¡œ ë³€ê²½í•  ë•Œ ì£¼ì˜í•  ì  :
 
-        auto_ptrÀº operator=()¸¦ »ç¿ëÇÒ ¼ö ÀÖÁö¸¸, (ÁÖÀÇ : ¿øº» °´Ã¼¸¦ null·Î ¸¸µé¾î ¹ö¸²)
-        unique_ptrÀº std::move()¸¦ »ç¿ëÇØ¾ß ÇÑ´Ù.
+        auto_ptrì€ operator=()ë¥¼ ì‚¬ìš©í•  ìˆ˜ ìˆì§€ë§Œ, (ì£¼ì˜ : ì›ë³¸ ê°ì²´ë¥¼ nullë¡œ ë§Œë“¤ì–´ ë²„ë¦¼)
+        unique_ptrì€ std::move()ë¥¼ ì‚¬ìš©í•´ì•¼ í•œë‹¤.
 
-        ¿Ö³ÄÇÏ¸é ¼­·Î ´Ù¸¥ 2°³ÀÇ unique_ptr°¡ ÇÏ³ªÀÇ °´Ã¼¸¦ °¡¸£Å³ ¼ö´Â ¾ø´Ù.
-        ±×·¡¼­ ÀÌ¸§¿¡ unique°¡ ÀÖ´Ù.
+        ì™œëƒí•˜ë©´ ì„œë¡œ ë‹¤ë¥¸ 2ê°œì˜ unique_ptrê°€ í•˜ë‚˜ì˜ ê°ì²´ë¥¼ ê°€ë¥´í‚¬ ìˆ˜ëŠ” ì—†ë‹¤.
+        ê·¸ë˜ì„œ ì´ë¦„ì— uniqueê°€ ìˆë‹¤.
 
         http://stackoverflow.com/questions/3451099/stdauto-ptr-to-stdunique-ptr
     */

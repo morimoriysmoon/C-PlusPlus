@@ -21,7 +21,7 @@ public:
 
 private:
     std::string& nameValue;
-    const T objectValue; // ÀÌ ¸â¹öº¯¼ö ´ö¿¡ ±âº» ÇÒ´ç ¿¬»êÀÚ¸¦ »ç¿ëÇÒ ¼ö ¾ø´Ù.
+    const T objectValue; // ì´ ë©¤ë²„ë³€ìˆ˜ ë•ì— ê¸°ë³¸ í• ë‹¹ ì—°ì‚°ìžë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
 };
 
 int main()
@@ -34,16 +34,16 @@ int main()
     NamedObject<int> p(newDog, 2);
     NamedObject<int> s(oldDog, 36);
 
-    //p = s; // compile error : class³»ºÎ¿¡ const ¸â¹ö º¯¼ö°¡ Á¸ÀçÇÏ¿© ±âº» ÇÒ´ç ¿¬»êÀÚ »ç¿ë ºÒ°¡
+    //p = s; // compile error : classë‚´ë¶€ì— const ë©¤ë²„ ë³€ìˆ˜ê°€ ì¡´ìž¬í•˜ì—¬ ê¸°ë³¸ í• ë‹¹ ì—°ì‚°ìž ì‚¬ìš© ë¶ˆê°€
 
     HouseForSale a;
     HouseForSale c;
 
-    // º¹»ç »ý¼ºÀÚ¸¦ È£ÃâÇÏ¸é¼­ UncopyableÀÇ º¹»ç»ý¼ºÀÚµµ È£ÃâÇÏ·Á ÇÏÁö¸¸
-    // privateÀÌ±â ¶§¹®¿¡ È£ÃâÀÌ ºÒ°¡´ÉÇÏ´Ù. ÄÄÆÄÀÏ ºÒ°¡´É.
+    // ë³µì‚¬ ìƒì„±ìžë¥¼ í˜¸ì¶œí•˜ë©´ì„œ Uncopyableì˜ ë³µì‚¬ìƒì„±ìžë„ í˜¸ì¶œí•˜ë ¤ í•˜ì§€ë§Œ
+    // privateì´ê¸° ë•Œë¬¸ì— í˜¸ì¶œì´ ë¶ˆê°€ëŠ¥í•˜ë‹¤. ì»´íŒŒì¼ ë¶ˆê°€ëŠ¥.
     HouseForSale b(a);
 
-    // ´ëÀÔ¿¬»êÀÚ¸¦ È£ÃâÇÏÁö¸¸ private¼Ó¼º¶§¹®¿¡ È£Ãâ ºÒ°¡.
+    // ëŒ€ìž…ì—°ì‚°ìžë¥¼ í˜¸ì¶œí•˜ì§€ë§Œ privateì†ì„±ë•Œë¬¸ì— í˜¸ì¶œ ë¶ˆê°€.
     c = a;
 
     return 0;

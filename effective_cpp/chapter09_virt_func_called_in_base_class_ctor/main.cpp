@@ -9,14 +9,14 @@ public:
     Transaction()
     {
         /// 1)
-        /// ÀÚ½ÄÀÇ LogTransaction()°¡ ºÒ¸±°Å¶ó »ý°¢ÇÏ¸é ¾ÈµÈ´Ù.
-        /// ¿Ö³ÄÇÏ¸é ¾ÆÁ÷ ÀÚ½ÄÀº ÃÊ±âÈ­µµ µÇÁö ¾Ê¾Ò´Ù.
+        /// ìžì‹ì˜ LogTransaction()ê°€ ë¶ˆë¦´ê±°ë¼ ìƒê°í•˜ë©´ ì•ˆëœë‹¤.
+        /// ì™œëƒí•˜ë©´ ì•„ì§ ìžì‹ì€ ì´ˆê¸°í™”ë„ ë˜ì§€ ì•Šì•˜ë‹¤.
         //LogTransaction();
 
         /// 2)
-        /// ¾Æ·¡Ã³·³ º°µµÀÇ ÇÔ¼ö¸¦ »ç¿ëÇÏ¸é ºôµå¿¡´Â ¹®Á¦°¡ ¾øÁö¸¸
-        /// ½ÇÇàÇÏ¸é "pure virtual function called"·Î ÀÎÇØ »ç¸ÁÇÔ.
-        /// ÈÎ¾À ´õ »ç¾ÇÇÑ ÄÚµåÀÓ.
+        /// ì•„ëž˜ì²˜ëŸ¼ ë³„ë„ì˜ í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ë©´ ë¹Œë“œì—ëŠ” ë¬¸ì œê°€ ì—†ì§€ë§Œ
+        /// ì‹¤í–‰í•˜ë©´ "pure virtual function called"ë¡œ ì¸í•´ ì‚¬ë§í•¨.
+        /// í›¨ì”¬ ë” ì‚¬ì•…í•œ ì½”ë“œìž„.
         doInitialize();
     }
 
@@ -50,17 +50,17 @@ public:
 
 /**
 
-    »ý¼º          Base                : Derive´Â ¾ø´Ù°í »ý°¢
+    ìƒì„±          Base                : DeriveëŠ” ì—†ë‹¤ê³  ìƒê°
                         \
                         Derive
 
                             |
-                            | ÀÌ·± Àú·± µ¿ÀÛÀ» ¼öÇàÇÑ´Ù.
+                            | ì´ëŸ° ì €ëŸ° ë™ìž‘ì„ ìˆ˜í–‰í•œë‹¤.
                             |
 
-     ¼Ò¸ê               ~Derive
+     ì†Œë©¸               ~Derive
                         /
-                    ~Base             : Derive´Â ¾ø´Ù°í »ý°¢
+                    ~Base             : DeriveëŠ” ì—†ë‹¤ê³  ìƒê°
 */
 
 

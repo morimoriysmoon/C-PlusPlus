@@ -77,8 +77,8 @@ int main()
 
 
     /**
-		»ç¿ëÀÚ°¡ Á÷Á¢ ÀÛ¼ºÇÑ deleteÇÔ¼ö¸¦ ÅÛÇÃ¸´¿¡ ÁöÁ¤ÇÒ ¼ö ÀÖ´Ù.
-		À§Á¬ÀÇ °æ¿ì, delete È£ÃâÀü¿¡ Destroy()¸¦ È£ÃâÇØ¾ß ÇÏ¹Ç·Î, º°µµÀÇ deleteÇÔ¼ö°´Ã¼¸¦ »ç¿ëÇÏ¸é À¯¿ëÇÏ´Ù.
+		ì‚¬ìš©ìê°€ ì§ì ‘ ì‘ì„±í•œ deleteí•¨ìˆ˜ë¥¼ í…œí”Œë¦¿ì— ì§€ì •í•  ìˆ˜ ìˆë‹¤.
+		ìœ„ì ¯ì˜ ê²½ìš°, delete í˜¸ì¶œì „ì— Destroy()ë¥¼ í˜¸ì¶œí•´ì•¼ í•˜ë¯€ë¡œ, ë³„ë„ì˜ deleteí•¨ìˆ˜ê°ì²´ë¥¼ ì‚¬ìš©í•˜ë©´ ìœ ìš©í•˜ë‹¤.
     */
     unique_ptr<widget, widgetDeleter> pWidget(new widget("unique ptr"));
     pWidget->Create();
@@ -86,8 +86,8 @@ int main()
 
 
     /**
-        boost::shared_array´ë½Å std::unique_ptr¸¦ »ç¿ëÇÏ¸é µÈ´Ù.
-        ÀÌ·± ÀÌÀ¯¿¡¼­ c++11Àº shared_array¸¦ Áö¿øÇÏÁö ¾Ê´Â´Ù.
+        boost::shared_arrayëŒ€ì‹  std::unique_ptrë¥¼ ì‚¬ìš©í•˜ë©´ ëœë‹¤.
+        ì´ëŸ° ì´ìœ ì—ì„œ c++11ì€ shared_arrayë¥¼ ì§€ì›í•˜ì§€ ì•ŠëŠ”ë‹¤.
     */
 
     const std::size_t nCount = 20;

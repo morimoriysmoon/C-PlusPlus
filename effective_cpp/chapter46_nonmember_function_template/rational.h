@@ -13,8 +13,8 @@ public:
     const T denominator(void) const { return denom; }
 
     /**
-        Å¬·¡½º ÅÛÇÃ¸´³»¿¡¼­ ºñ¸â¹ö ÇÔ¼ö¸¦ ¼±¾ğ/Á¤ÀÇÇÏ¿´´Ù.
-        µû¶ó¼­, template<T>´Â ºÒÇÊ¿äÇÏ´Ù.
+        í´ë˜ìŠ¤ í…œí”Œë¦¿ë‚´ì—ì„œ ë¹„ë©¤ë²„ í•¨ìˆ˜ë¥¼ ì„ ì–¸/ì •ì˜í•˜ì˜€ë‹¤.
+        ë”°ë¼ì„œ, template<T>ëŠ” ë¶ˆí•„ìš”í•˜ë‹¤.
     */
     friend
     const Rational_V1 operator*(const Rational_V1& lhs, const Rational_V1& rhs)
@@ -36,11 +36,11 @@ private:
 //}
 
 /**
-    helper ÇÔ¼ö¸¦ »ç¿ëÇÑ ¿¹
+    helper í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•œ ì˜ˆ
 */
 
 /**
-	Àü¹æ¼±¾ğ
+	ì „ë°©ì„ ì–¸
 */
 template<typename T> class Rational_V2;
 
@@ -59,14 +59,14 @@ public:
     const T denominator(void) const { return denom; }
 
     /**
-        Å¬·¡½º ÅÛÇÃ¸´³»¿¡¼­ ºñ¸â¹ö ÇÔ¼ö¸¦ ¼±¾ğ/Á¤ÀÇÇÏ¿´´Ù.
-        µû¶ó¼­, template<T>´Â ºÒÇÊ¿äÇÏ´Ù.
+        í´ë˜ìŠ¤ í…œí”Œë¦¿ë‚´ì—ì„œ ë¹„ë©¤ë²„ í•¨ìˆ˜ë¥¼ ì„ ì–¸/ì •ì˜í•˜ì˜€ë‹¤.
+        ë”°ë¼ì„œ, template<T>ëŠ” ë¶ˆí•„ìš”í•˜ë‹¤.
     */
     friend
     const Rational_V2 operator*(const Rational_V2& lhs, const Rational_V2& rhs)
     {
         /**
-            helperÇÔ¼ö¸¦ »ç¿ëÇÏ¿© ÄÚµå »çÀÌÁî¸¦ ÁÙÀÎ´Ù.
+            helperí•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ ì½”ë“œ ì‚¬ì´ì¦ˆë¥¼ ì¤„ì¸ë‹¤.
         */
         return doMultiply(lhs, rhs);
     }

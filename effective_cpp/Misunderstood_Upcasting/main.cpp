@@ -39,29 +39,29 @@ public:
     {
 
 
-        /// 1> namespace¸¦ ÅëÇÑ ºÎ¸ðÅ¬·¡½ºÀÇ ÇÔ¼ö È£Ãâ : °¡Àå ÀÏ¹ÝÀûÀÎ ¹æ¹ý.
-        /// º»ÀÎµµ ÀÌ ¹æ¹ýÀ» »ç¿ëÇß´Ù.
+        /// 1> namespaceë¥¼ í†µí•œ ë¶€ëª¨í´ëž˜ìŠ¤ì˜ í•¨ìˆ˜ í˜¸ì¶œ : ê°€ìž¥ ì¼ë°˜ì ì¸ ë°©ë²•.
+        /// ë³¸ì¸ë„ ì´ ë°©ë²•ì„ ì‚¬ìš©í–ˆë‹¤.
         PWindow::addNum(); /// Ok
 
 
 
-        /// 2> ºÎ¸ðÀÇ Æ÷ÀÎÅÍ·Î Çüº¯È¯À» ½ÃµµÇßÀ¸³ª virtual ÇÔ¼ö·Î ÀÎÇÏ¿© º»ÀÎÀÇ °ÍÀÌ È£ÃâµÊ.
-        ///static_cast<PWindow*>(this)->addNum(); /// ÀÚ½ÄÀÇ ÇÔ¼ö È£Ãâ. infinite loop·Î ÀÎÇÑ stack overflow.
+        /// 2> ë¶€ëª¨ì˜ í¬ì¸í„°ë¡œ í˜•ë³€í™˜ì„ ì‹œë„í–ˆìœ¼ë‚˜ virtual í•¨ìˆ˜ë¡œ ì¸í•˜ì—¬ ë³¸ì¸ì˜ ê²ƒì´ í˜¸ì¶œë¨.
+        ///static_cast<PWindow*>(this)->addNum(); /// ìžì‹ì˜ í•¨ìˆ˜ í˜¸ì¶œ. infinite loopë¡œ ì¸í•œ stack overflow.
 
 
 
-        /// 3> ºÎ¸ðÀÇ class·Î Çüº¯È¯À» ½Ãµµ. ÀÓ½Ã°´Ã¼°¡ »ý¼ºµÈ´Ù(º¹»ç »ý¼ºÀÚ¸¦ ÅëÇÑ)
+        /// 3> ë¶€ëª¨ì˜ classë¡œ í˜•ë³€í™˜ì„ ì‹œë„. ìž„ì‹œê°ì²´ê°€ ìƒì„±ëœë‹¤(ë³µì‚¬ ìƒì„±ìžë¥¼ í†µí•œ)
         /**
-            ±âº»ÀûÀ¸·Î Çüº¯È¯Àº "ÀÓ½Ã °´Ã¼¸¦ ¸¸µç´Ù" ¶ó°í ¾Ë¾Æ µÎ±â¸¸ ÇÏ¸é
-            ±×·°Àú·°(... ÀÌ¸é »ç¼ö¿Í ÁøÁöÇÑ Ä¿ÇÇ ÇÑÀÜÀ» ¸¶½Ç... )³Ñ¾î°¥ ¼ö ÀÖ°í,
-            splice´Â SÀÇ ÀÓ½Ã °´Ã¼ »ý¼ºÀÌ¹Ç·Î tÀÇ T ºÎºÐÀÌ Àß·Á ³ª°¡´Â ¹®Á¦Á¡À» ÁöÀûÇÑ´Ù.
-            Ã¥¿¡´Â »ý·«µÈ°ÍÀ¸·Î º¸¾Æ, ... ±âÃÊÀÌ±â ¶§¹®ÀÌÁö ¾ÊÀ»±î.. ÇÑ´Ù.
+            ê¸°ë³¸ì ìœ¼ë¡œ í˜•ë³€í™˜ì€ "ìž„ì‹œ ê°ì²´ë¥¼ ë§Œë“ ë‹¤" ë¼ê³  ì•Œì•„ ë‘ê¸°ë§Œ í•˜ë©´
+            ê·¸ëŸ­ì €ëŸ­(... ì´ë©´ ì‚¬ìˆ˜ì™€ ì§„ì§€í•œ ì»¤í”¼ í•œìž”ì„ ë§ˆì‹¤... )ë„˜ì–´ê°ˆ ìˆ˜ ìžˆê³ ,
+            spliceëŠ” Sì˜ ìž„ì‹œ ê°ì²´ ìƒì„±ì´ë¯€ë¡œ tì˜ T ë¶€ë¶„ì´ ìž˜ë ¤ ë‚˜ê°€ëŠ” ë¬¸ì œì ì„ ì§€ì í•œë‹¤.
+            ì±…ì—ëŠ” ìƒëžµëœê²ƒìœ¼ë¡œ ë³´ì•„, ... ê¸°ì´ˆì´ê¸° ë•Œë¬¸ì´ì§€ ì•Šì„ê¹Œ.. í•œë‹¤.
 
-            ±âÃÊ¶õ´Ù.
-            ³­ ¿Ö ¸ô¶úÁö???
-            ºÎ²ô·´´Ù.
+            ê¸°ì´ˆëž€ë‹¤.
+            ë‚œ ì™œ ëª°ëžì§€???
+            ë¶€ë„ëŸ½ë‹¤.
         */
-        static_cast<PWindow>(*this).addNum(); /// ÀÓ½Ã°´Ã¼(rvalue)ÀÇ ÇÔ¼ö¸¦ È£ÃâÇÏ°Ô µÇ¹Ç·Î ½ÇÁ¦ °ªÀº º¯°æµÇÁö ¾ÊÀ½.
+        static_cast<PWindow>(*this).addNum(); /// ìž„ì‹œê°ì²´(rvalue)ì˜ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ê²Œ ë˜ë¯€ë¡œ ì‹¤ì œ ê°’ì€ ë³€ê²½ë˜ì§€ ì•ŠìŒ.
 
 
 

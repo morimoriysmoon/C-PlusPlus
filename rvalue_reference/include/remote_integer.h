@@ -76,8 +76,8 @@ class remote_integer
             cout << "move ctor called" << endl;
 
 
-            /// ¸Å°³ º¯¼ö other´Â ÀÌ¸§ÀÌ ÀÖÀ¸¹Ç·Î named rvalueÀÌ°í ÀÌ°ÍÀº lvalue·Î Ã³¸®µÈ´Ù.
-            /// µû¶ó¼­ std::move()¸¦ »ç¿ëÇÏ¿© unnamed rvalue·Î º¯°æÇØ¾ß move semantics¸¦ »ç¿ëÇÒ ¼ö ÀÖ´Ù.
+            /// ë§¤ê°œ ë³€ìˆ˜ otherëŠ” ì´ë¦„ì´ ìžˆìœ¼ë¯€ë¡œ named rvalueì´ê³  ì´ê²ƒì€ lvalueë¡œ ì²˜ë¦¬ëœë‹¤.
+            /// ë”°ë¼ì„œ std::move()ë¥¼ ì‚¬ìš©í•˜ì—¬ unnamed rvalueë¡œ ë³€ê²½í•´ì•¼ move semanticsë¥¼ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤.
 
             *this = std::move(other); /// move assignment op called
             //*this = other; /// copy assignment op called

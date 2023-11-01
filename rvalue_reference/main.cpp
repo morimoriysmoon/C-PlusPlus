@@ -98,13 +98,13 @@ remote_integer frumple(const int n)
 {
     if (n == 1729)
     {
-        return remote_integer(1729); /// 1) copy ctor È£Ãâ
+        return remote_integer(1729); /// 1) copy ctor í˜¸ì¶œ
     }
 
-    remote_integer ret(n * n); /// 2) move ctor È£Ãâ
+    remote_integer ret(n * n); /// 2) move ctor í˜¸ì¶œ
 
     /*
-        1¹ø°ú 2¹øÀÇ Â÷ÀÌ°¡ ¹«¾ğÁö ¸ğ¸£°ÚÀ½.
+        1ë²ˆê³¼ 2ë²ˆì˜ ì°¨ì´ê°€ ë¬´ì–¸ì§€ ëª¨ë¥´ê² ìŒ.
     */
 
     return ret;
@@ -172,18 +172,18 @@ int main()
 
     //test_move_semantics_speed();
 
-/** frumple(5); ³»¿ë ºĞ¼® : ºñÈ¿À²ÀûÀÌ´Ù.
+/** frumple(5); ë‚´ìš© ë¶„ì„ : ë¹„íš¨ìœ¨ì ì´ë‹¤.
 
     start
 
-    explicit unary ctor called          <-- ÇÔ¼ö³» ·ÎÄÃ lvalueº¯¼ö »ı¼º
+    explicit unary ctor called          <-- í•¨ìˆ˜ë‚´ ë¡œì»¬ lvalueë³€ìˆ˜ ìƒì„±
 
-    move ctor called                    <-- ¸®ÅÏ °ªÀ» »ı¼ºÇÏ´Â °úÁ¤
-    move assignment operator called     <-- ¸®ÅÏ °ªÀ» »ı¼ºÇÏ´Â °úÁ¤
+    move ctor called                    <-- ë¦¬í„´ ê°’ì„ ìƒì„±í•˜ëŠ” ê³¼ì •
+    move assignment operator called     <-- ë¦¬í„´ ê°’ì„ ìƒì„±í•˜ëŠ” ê³¼ì •
 
-    default dtor called                 <-- ÇÔ¼ö³» ·ÎÄÃ lvalueº¯¼ö ¼Ò¸ê
+    default dtor called                 <-- í•¨ìˆ˜ë‚´ ë¡œì»¬ lvalueë³€ìˆ˜ ì†Œë©¸
 
-    default dtor called                 <-- ÇÔ¼ö°¡ ¸®ÅÏÇÑ rvalue°¡ ÇÔ¼ö ¿ÜºÎ¿¡¼­ ¼Ò¸ê (rvalue´Â single expression ¿ÜºÎ¿¡¼­ »ç¶óÁø´Ù.)
+    default dtor called                 <-- í•¨ìˆ˜ê°€ ë¦¬í„´í•œ rvalueê°€ í•¨ìˆ˜ ì™¸ë¶€ì—ì„œ ì†Œë©¸ (rvalueëŠ” single expression ì™¸ë¶€ì—ì„œ ì‚¬ë¼ì§„ë‹¤.)
 
     end
 
@@ -191,19 +191,19 @@ int main()
 
     cout << "start" << endl;
 
-    /// Return Value Optimization¿¡ ÀÇÇØ¼­ copyµ¿ÀÛÀº ÀÏ¾î³ª ¾Ê°í,
-    /// compiler°¡ rvalueÀÇ ¸Ş¸ğ¸® ¿µ¿ªÀ» ±×´ë·Î »ç¿ëÇÑ´Ù.
+    /// Return Value Optimizationì— ì˜í•´ì„œ copyë™ì‘ì€ ì¼ì–´ë‚˜ ì•Šê³ ,
+    /// compilerê°€ rvalueì˜ ë©”ëª¨ë¦¬ ì˜ì—­ì„ ê·¸ëŒ€ë¡œ ì‚¬ìš©í•œë‹¤.
     remote_integer a = frumple(5);
     cout << "end" << endl;
 
 
-/**  frumple(1729); ³»¿ë ºĞ¼® : È¿À²ÀûÀÌ´Ù.
+/**  frumple(1729); ë‚´ìš© ë¶„ì„ : íš¨ìœ¨ì ì´ë‹¤.
 
     start
 
-    explicit unary ctor called          <-- ÇÔ¼ö³» ·ÎÄÃ rvalueº¯¼ö »ı¼º
+    explicit unary ctor called          <-- í•¨ìˆ˜ë‚´ ë¡œì»¬ rvalueë³€ìˆ˜ ìƒì„±
 
-    default dtor called                 <-- ÇÔ¼ö°¡ ¸®ÅÏÇÑ rvalue°¡ ÇÔ¼ö ¿ÜºÎ¿¡¼­ ¼Ò¸ê (rvalue´Â single expression ¿ÜºÎ¿¡¼­ »ç¶óÁø´Ù.)
+    default dtor called                 <-- í•¨ìˆ˜ê°€ ë¦¬í„´í•œ rvalueê°€ í•¨ìˆ˜ ì™¸ë¶€ì—ì„œ ì†Œë©¸ (rvalueëŠ” single expression ì™¸ë¶€ì—ì„œ ì‚¬ë¼ì§„ë‹¤.)
 
     end
 
@@ -211,8 +211,8 @@ int main()
 
     cout << "start" << endl;
 
-    /// Return Value Optimization¿¡ ÀÇÇØ¼­ copyµ¿ÀÛÀº ÀÏ¾î³ª ¾Ê°í,
-    /// compiler°¡ rvalueÀÇ ¸Ş¸ğ¸® ¿µ¿ªÀ» ±×´ë·Î »ç¿ëÇÑ´Ù.
+    /// Return Value Optimizationì— ì˜í•´ì„œ copyë™ì‘ì€ ì¼ì–´ë‚˜ ì•Šê³ ,
+    /// compilerê°€ rvalueì˜ ë©”ëª¨ë¦¬ ì˜ì—­ì„ ê·¸ëŒ€ë¡œ ì‚¬ìš©í•œë‹¤.
     remote_integer b = frumple(1729);
     cout << "end" << endl;
 

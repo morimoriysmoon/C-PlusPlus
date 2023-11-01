@@ -11,7 +11,7 @@ struct Factorial
 
 
 /**
-    recursive µ¿ÀÛÀ» Á¤Áö½ÃÅ°±â À§ÇÑ Æ¯¼öÈ­ ¹öÀü
+    recursive ë™ì‘ì„ ì •ì§€ì‹œí‚¤ê¸° ìœ„í•œ íŠ¹ìˆ˜í™” ë²„ì „
 */
 template<>
 struct Factorial<0>
